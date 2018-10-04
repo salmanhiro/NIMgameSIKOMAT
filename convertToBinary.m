@@ -1,4 +1,10 @@
 function convertToBinary(num1,num2,num3) %hey there, we have 3 num to be converted into array of binary!
+  %insert function here
+  
+num1 = input('enter num1: '); % kalo ada di main, abaikan 
+num2 = input('enter num2: ');
+num3 = input('enter num3: ');
+
 
 i = 1; % jadi awalnya ada i untuk indeks vektor "biner"
 j = 1;
@@ -23,9 +29,11 @@ while flooring1 >= 2
   i = i + 1;
   biner1(i) = num2str(reminder1);
 end
+
 biner1(i + 1) = num2str(flooring1);
-biner1 = fliplr(biner1);
-vekbin1 = str2num(biner1-'0')
+vekbin1 = fliplr(biner1);
+vekbinA = str2num(vekbin1);
+vekbinA = vekbinA - '0';
 
 while flooring2 >= 2
   num2 = flooring2;
@@ -34,20 +42,24 @@ while flooring2 >= 2
   j = j + 1;
   biner2(j) = num2str(reminder2);
 end
+
 biner2(j + 1) = num2str(flooring2);
-biner2 = fliplr(biner2);
-vekbin2 = str2num(biner2 -'0')
+vekbin2 = fliplr(biner2);
+vekbinB = str2num(vekbin2);
+vekbinB = vekbinB - '0';
 
 while flooring3 >= 2
-  num3 = flooring3;
-  flooring3 = floor(num3/2);
-  reminder3 = rem(num3, 2);
-  k = k + 1;
+ num3 = flooring3;
+ flooring3 = floor(num3/2);
+ reminder3 = rem(num3, 2);
+ k = k + 1;
  biner3(k) = num2str(reminder3);
 end
+
 biner3(k + 1) = num2str(flooring3);
-biner3 = fliplr(biner3); % ini vektornya
-vekbin3 = str2num(biner3 -'0')
+vekbin3 = fliplr(biner3); % ini vektornya
+vekbinC = str2num(vekbin3);
+vekbinC = vekbinC - '0';
 
 disp(vekbin1)
 disp(vekbin2)
