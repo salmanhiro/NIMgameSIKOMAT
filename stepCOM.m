@@ -1,10 +1,13 @@
-function [source, amount] = stepCOM(numA, numB, numC)
+function [source, amount] = stepCOM(num1, num2, num3)
 %inisialisasi
 source = -1;
 amount = -1;
 ketemu = false;  
 %BRUTE FORCE FUEHEHE
 %mulai dari heap pertama dulu
+stoneAmount(1) = num1;
+stoneAmount(2) = num2;
+stoneAmount(3) = num3;
   for i = stoneAmount(1):-1:1
     if(hitungXOR(stoneAmount(1) - i, stoneAmount(2), stoneAmount(3)) == 0)
       source = 1;
