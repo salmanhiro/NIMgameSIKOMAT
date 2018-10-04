@@ -24,7 +24,8 @@ while flooring1 >= 2
   biner1(i) = num2str(reminder1);
 end
 biner1(i + 1) = num2str(flooring1);
-vekbin1 = fliplr(biner1);
+biner1 = fliplr(biner1);
+vekbin1 = biner1-'0'
 
 while flooring2 >= 2
   num2 = flooring2;
@@ -34,7 +35,8 @@ while flooring2 >= 2
   biner2(j) = num2str(reminder2);
 end
 biner2(j + 1) = num2str(flooring2);
-vekbin2 = fliplr(biner2);
+biner2 = fliplr(biner2);
+vekbin2 = biner2 -'0'
 
 while flooring3 >= 2
   num3 = flooring3;
@@ -44,7 +46,8 @@ while flooring3 >= 2
  biner3(k) = num2str(reminder3);
 end
 biner3(k + 1) = num2str(flooring3);
-vekbin3 = fliplr(biner3); % ini vektornya
+biner3 = fliplr(biner3); % ini vektornya
+vekbin3 = biner3 -'0'
 
 disp(vekbin1)
 disp(vekbin2)
